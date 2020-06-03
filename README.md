@@ -22,6 +22,12 @@
 * Begineer
   * Deploying Microservices To EKS fargate
 
+### NOTE:
+Add az config as following to eksworkshop.yaml if you encounter insufficient resource error, when you create an EKS cluster, if not please ignore it.
+```
+availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
+```
+
 ## Amazon ECS Workshop
 ### Please open aws ecs workshop to finish action as following (https://ecsworkshop.com/)
 * Introduction
@@ -31,7 +37,7 @@
 * Amazon ECS > Account Settings: Enable CloudWatch Container Insights
 * Amazon ECS > Clusters > Get Started
   * Step 1: Container and Task > Container definition > Custom > configure
-    * Image: lexwhen/docker-2048
+    * Image: alexwhen/docker-2048
     * Port mappings > Container port: 80
   * Step 2: Service > Define your service > Edit
     * Number of desired tasks > 3
